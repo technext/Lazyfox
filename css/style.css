@@ -1,4 +1,4 @@
-/****************************************TYPOGRAPHY***************************************************/
+/****************************************TYPOGRAPHY ***************************************************/
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -88,6 +88,11 @@ p{
 }
 .cta-btn-group .btn{
 	margin: 10px;
+}
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
 }
 /*******************************************HEADER***************************************************/
 header{
