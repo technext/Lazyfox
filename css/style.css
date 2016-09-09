@@ -592,6 +592,20 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 	.card-block{
 		padding: 2rem;
 	}
+	.navbar{
+	    background-image: -webkit-linear-gradient(305deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+	    background-image: -o-linear-gradient(305deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+	    background-image: linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+	}
+	.navbar-divider{
+		display: none;
+	}
+	.navbar-toggle{
+		margin-top: 2px;
+	}
+	.logo-colored img, .logo-white img{
+		max-height: 40px;
+	}
 }
 @media screen and (min-width: 769px){
 	.image-right-slide-wraper{
