@@ -27,6 +27,7 @@ p{
 	color: #999999;
 
 }
+
 .btn{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 0.707em;
@@ -34,9 +35,14 @@ p{
 	font-weight: 600;
 	padding:12px 40px;
 	box-shadow: 0px 4px 10px 0px rgba(91, 91, 91, 0.45);
+	line-height: 1;
+	transition: all .5s ease;
+	letter-spacing: 1px;
 }
+
 .btn-link{
 	padding:0;
+	box-shadow: none;
 }
 .icon-on-button{
 	margin-left: 8px;
@@ -50,6 +56,7 @@ p{
 	border-color: transparent !important;
 	border:0px;
 	padding-top: 30px;
+	transition: all .5s ease;
 }
 .navbar-brand{
 	padding: 0;
@@ -66,6 +73,12 @@ p{
     color: #fff;
     background-color: transparent;
 }
+.navbar-default .navbar-nav>li>a:hover{
+	color: #e86c6c;
+}
+.navbar-nav>li>a.btn-navbar:hover{
+	color: #fff;
+}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #fff;
     background-color: transparent;
@@ -79,6 +92,14 @@ p{
 	height: 1px;
 	border:0px;
 	background-color: rgba(255,255,255,0.1);
+	transition: all .5s ease;
+}
+.colored-nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.colored-nav .navbar-divider{
+	display: none;
 }
 .cta{
 	color: #fff;
@@ -89,7 +110,17 @@ p{
 .cta-btn-group .btn{
 	margin: 10px;
 }
-.btn-primary.focus, .btn-primary:focus {
+.btn-orange.focus, .btn-orange:focus,.btn-orange.active, .btn-orange:active {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+.btn-white.focus, .btn-white:focus,.btn-white.active, .btn-white:active {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+.btn-violat.focus, .btn-violat:focus,.btn-violat.active, .btn-violat:active {
     color: #fff;
     background-color: #286090;
     border-color: #122b40;
@@ -149,6 +180,7 @@ header{
 }
 .bottom-line{
 	position: relative;
+	margin-bottom: 20px;
 }
 
 .bottom-line:after{
@@ -159,6 +191,8 @@ header{
 	height: 2px;
 	background-color: #0e153a;
 	left: 0;
+	margin-top: 7px;
+	margin-bottom: 5px;
 }
 /*******************************************CARD*****************************************************/
 .card{
@@ -301,19 +335,24 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 	padding: 0;
 
 }
-.logo-wraper{
+.logo-colored,.logo-white{
 	display: inline-block;
     font-size: 28px;
     font-weight: 600;
-    color: #e8617d;
     text-transform: uppercase;
 }
-.logo-wraper img{
+.logo-colored img,.logo-white img{
 	display: inline-block;
     text-transform: uppercase;
     max-height: 50px;
     margin-right: 10px;
 
+}
+.logo-white{
+	color: #fff;
+}
+.logo-colored{
+	color: #e8617d;
 }
 .footer-left-content{
 	margin-bottom: 50px;
@@ -328,19 +367,22 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 	padding-top: 120px;
 }
 /*******************************************ELEMENT STYLES*******************************************/
-
-.gradient-violat {
+.btn-orange,.btn-violat{
+	color: #fff;
+}
+.btn-violat,.gradient-violat {
   background-image: -moz-linear-gradient( 135deg, rgb(244,202,216) 0%, rgb(129,112,137) 35%, rgb(14,21,58) 100%);
   background-image: -webkit-linear-gradient( 135deg, rgb(244,202,216) 0%, rgb(129,112,137) 35%, rgb(14,21,58) 100%);
   background-image: -ms-linear-gradient( 135deg, rgb(244,202,216) 0%, rgb(129,112,137) 35%, rgb(14,21,58) 100%);
 }
-.gradient-orange {
+.btn-orange,.gradient-orange {
   background-image: -webkit-linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
   background-image: -o-linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
   background-image: linear-gradient(125deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
   box-shadow: 0px 8px 27px 0px rgba(116, 44, 69, 0.21);
 }
-.gradient-white{
+
+.btn-white,.gradient-white{
 	background-image:
     linear-gradient(125deg, #ffffff, #e1e1e1);
     color: #6b6a8b;
@@ -350,6 +392,13 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 }
 .btn-rounded-corner{
 	border-radius: 50px;
+}
+.btn-video{
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+    -webkit-user-select: none;
 }
 .text-center{
 	text-align: center;
@@ -395,9 +444,76 @@ ul.social-list li a:hover, ul.social-list li a:focus{
     background-position-x: 100%!important;
     background-size: 50% 100% !important;
 }
+.btn-navbar{
+	line-height: 1;
+}
 .btn-link i{
 	font-size: 18px;
     vertical-align: middle;
+}
+.btn-video{
+	text-transform: uppercase;
+	transition: all .5s ease;
+}
+.btn-video:hover{
+	text-decoration: none;
+	color: #e86c6c;
+}
+.btn-video:hover .icon-rounded{
+  border-color: #e86c6c;
+  box-shadow: 0px 8px 27px 0px rgba(116, 44, 69, 0.21);
+  color: #e86c6c;
+}
+.btn.gradient-orange:hover{
+	background-color: #e86c6c!important;
+	background-image: none!important;
+}
+.btn-orange.active, .btn-orange:active{
+	color: #fff;
+	background-image: -webkit-linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+    background-image: -o-linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+    background-image: linear-gradient(125deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+    border:0px;
+    border-color: transparent;
+}
+.btn-violat.active, .btn-violat:active{
+	color: #fff;
+	background-image: -moz-linear-gradient( 135deg, rgb(244,202,216) 0%, rgb(129,112,137) 35%, rgb(14,21,58) 100%);
+    background-image: -webkit-linear-gradient( 135deg, rgb(244,202,216) 0%, rgb(129,112,137) 35%, rgb(14,21,58) 100%);
+    background-image: -ms-linear-gradient( 135deg, rgb(244,202,216) 0%, rgb(129,112,137) 35%, rgb(14,21,58) 100%);
+    border:0px;
+    border-color: transparent;
+}
+.btn-violat:hover,.btn-white:hover{
+	background-image: -webkit-linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+    background-image: -o-linear-gradient(35deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+    background-image: linear-gradient(125deg, rgb(232,88,137) 0%, rgb(232,98,123) 32%, rgb(232,108,108) 100%);
+    border:0px;
+    border-color: transparent;
+}
+
+.icon-rounded{
+	width: 49px;
+    height: 49px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 5px;
+    transition: all .5s ease;
+}
+.icon-rounded i{
+	font-size: 3rem;
+	line-height: 30px;
+	height:30px;
+	width: 30px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin-left: 12px;
+	transition: all .5s ease;
+
 }
 /*******************************************BACKGROUND-STYLES****************************************/
 .bg-transparent{
@@ -427,6 +543,11 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+.bordered-ios{
+	background-color: transparent;
+	border-color: #fff;
+	border:1px solid;
+}
 /*******************************************OVERLAY*************************************************/
 @media screen and (max-width: 768px) {
     .sm-padding-top-bottom-50-75 {
@@ -445,6 +566,32 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 	.image-right-slide-bg{
 		background-image: none!important;
 	}
+	.image-right-slide-bg{
+		padding:4rem 15px;
+	}
+	.home-slider h2{
+		font-size: 1.999em;
+	}
+	.home-slider .slider-para{
+		font-size: 1em;
+	}
+	.padding-top-bottom-120{
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	.padding-top-bottom-90{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.padding-top-120{
+		padding-top: 75px;
+	}
+	.padding-top-90{
+		padding-top: 60px;
+	}
+	.card-block{
+		padding: 2rem;
+	}
 }
 @media screen and (min-width: 769px){
 	.image-right-slide-wraper{
@@ -460,4 +607,32 @@ ul.social-list li a:hover, ul.social-list li a:focus{
 		float: none;
     	display: table-cell;
 	}
+}
+
+
+/***************************************OWL CAROUSEL ******************************************************************/
+
+.owl-theme .owl-controls .owl-page span{
+	background: #fff;
+}
+.owl-theme .owl-controls .owl-buttons div{
+	font-size: 45px;
+	background-color: transparent;
+	color: #fff;
+}
+.home-slider .owl-controls{
+	position: absolute;
+    width: 100%;
+    top: calc(50% - 35px);
+}
+.home-slider .owl-buttons{
+	position: relative;
+}
+.home-slider .owl-prev{
+	position: absolute;
+	left: 0;
+}
+.home-slider .owl-next{
+	position: absolute;
+	right: 0;
 }
